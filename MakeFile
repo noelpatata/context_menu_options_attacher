@@ -1,0 +1,25 @@
+# Define the compiler
+CC = gcc
+
+# Define compiler flags
+# -Iinclude tells the compiler to look for header files in the 'include' directory
+CFLAGS = -Wall -Wextra -g -Iinclude
+
+# Define linker flags (for Windows API libraries)
+LDFLAGS = -lshlwapi
+
+# Define the executable name
+TARGET = install.exe
+
+# Define source files with their new paths
+SRCS = src/main.c src/FileUtil.c src/RegistryEditUtil.c
+
+.PHONY: all clean
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+	$(CC) $(CFLAGS) $(SRCS) -o $@ $(LDFLAGS)
+
+clean:
+	del *.exe

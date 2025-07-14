@@ -11,7 +11,7 @@ REM Assuming run_replacer.bat and replace_script.py are in the same folder
 set "PYTHON_SCRIPT=%~dp0text_replace.py"
 
 REM Call the Python script, passing the target folder as an argument
-python "%PYTHON_SCRIPT%" "%TARGET_FOLDER%"
+"C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\python3.13.exe" "%PYTHON_SCRIPT%" "%TARGET_FOLDER%"
 
 REM The Python script's 'input("Press Enter...")' will keep the window open.
 REM If you remove that line from the Python script, you might want to add 'pause' here.
